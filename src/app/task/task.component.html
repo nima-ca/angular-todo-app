@@ -21,4 +21,6 @@
   *ngIf="isToggled"
   [isToggled]="isToggled"
   (onToggle)="onToggleModal()"
+  (onUpdate)="onUpdateTask($event)"
+  [title]="task.title"
 ></app-edit-modal>

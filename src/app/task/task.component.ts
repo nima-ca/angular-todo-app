@@ -19,6 +19,10 @@ export class TaskComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  onUpdateTask(title: string) {
+    this.task.title = title;
+  }
+
   onToggleModal() {
     this.isToggled = !this.isToggled;
   }

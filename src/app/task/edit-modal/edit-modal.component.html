@@ -6,14 +6,25 @@
   class="h-52 w-2/5 bg-white p-5 z-20 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
 >
   <label class="text-lg" for="task">Task:</label>
-  <input type="text" id="task" class="w-full p-2 mt-3 border-b border-black" />
+  <input
+    type="text"
+    id="task"
+    class="w-full p-2 mt-3 border-b border-black"
+    value="{{ title }}"
+    (input)="onUpdateInput($event)"
+  />
   <div class="flex justify-end mt-10">
     <button
       (click)="onToggleModal()"
       class="bg-red-600 py-2 px-4 text-white mr-1 rounded-xl"
     >
-      cancel
+      Cancel
     </button>
-    <button class="bg-green-600 py-2 px-4 text-white rounded-xl">Add</button>
+    <button
+      (click)="onEditTask()"
+      class="bg-green-600 py-2 px-4 text-white rounded-xl"
+    >
+      Edit
+    </button>
   </div>
 </form>
