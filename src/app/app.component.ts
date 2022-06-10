@@ -21,4 +21,8 @@ export class AppComponent {
       id: Math.trunc(Math.random() * 10000000),
     });
   }
+
+  deleteHandler(id: number): void {
+    this.tasks = this.tasks.filter((task) => task.id !== id);
+  }
 }
