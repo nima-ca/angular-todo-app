@@ -14,6 +14,8 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {}
 
   addTask(): void {
+    if (!this.task.trim()) return;
+
     this.taskAdded.emit(this.task);
     this.task = '';
   }
